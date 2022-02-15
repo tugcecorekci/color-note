@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Colored Notes</title>
+</head>
+
+<body>
+    <div class="headerSection">
+        <h1 class="header">MY NOTES</h1>
+        <div id="tglForm">
+            <form action="index.html" class="createNote">
+                <div class="newNotes">
+                    <input type="text" id="newNote" name="newNote" placeholder="Write your note">
+                    <select type="option" name="newNote" id="newSelect"></select>
+                </div>
+                <div class="submitBtn">
+                    <button id="submitBtn">create</button>
+                </div>
+            </form>
+        </div>
+        <div class="tglBtnSection">
+            <button id="tglBtn">add</button>
+        </div>
+    </div>
+    <div class="notepadDiv">
+        <ul class="notepad"></ul>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
