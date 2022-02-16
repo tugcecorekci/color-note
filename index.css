@@ -66,7 +66,7 @@ body {
 #tglForm {
     display: none;
     width: 500px;
-    height: 100px;
+    height: 150px;
 }
 
 .panel2 {
@@ -91,6 +91,7 @@ body {
 .headerSection h1{
     font-weight: bold;
     font-size: x-large;
+    color: #820B8A;
 }
 
 .noteSection {
@@ -106,10 +107,35 @@ body {
 }
 
 .oneNote div{
-    padding: 5px;
-    margin: 5px;
+    padding: 15px 25px 15px 15px;
 }
 
 .oneNote div:first-of-type {
     flex-grow: 1;
+}
+
+button {
+    background-color: #820B8A;
+    color: #fff;
+    border: none;
+    padding: 0.5em 1em;
+    margin: 0.2em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: .3em;
+}
+
+select, input {
+    border-color:black;
+    border-width: thin;
+    padding: 0.5em 1em;
+    margin: 0.2em;
+    text-align: start;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: .3em;
+    font-weight: light;
 }
