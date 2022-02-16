@@ -57,6 +57,7 @@ function appendDropMenu(newNote) {
     newNote.append(newDiv2)
     newDrop.value = drop.value
     newNote.style.backgroundColor = drop.value
+    newDrop.addEventListener('change', () => newNote.style.backgroundColor = newDrop.value)
 }
 
 function appendDeleteBtn(newNote) {
@@ -82,3 +83,4 @@ tglBtn.onclick = function () {
 }
 
 //change-color
+const drop2 = document.querySelector('')
