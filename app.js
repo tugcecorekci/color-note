@@ -1,5 +1,5 @@
 //dropdown menu
-const colors = ["red", "yellow", "blue", "cyan"]
+const colors = ["#D5FFF3", "#00916E", "#623CEA", "#DDDDDF"]
 const drop = document.querySelector('select')
 drop.appendChild(new Option("select", "0"))
 
@@ -14,49 +14,60 @@ function colorOptions(a) {
 
 colorOptions(drop)
 
-//button - add event
+//submit button - add event
 const submitBtn = document.querySelector('#submitBtn')
 submitBtn.addEventListener('click', clickHandler)
 
-//event func
+//submit button event func
 function clickHandler(e) {
     e.preventDefault()
     addNewNote()
+    document.querySelector('#newNote').value = ""
+    drop.value = 0
     tglForm.style.display = "none"
 }
 
-//event func - declare
+//submit button event func - declare
 function addNewNote() {
-    const newNote = document.createElement('li')
+    const newNote = document.createElement('p')
+    newNote.setAttribute("class", "oneNote")
     appendInputText(newNote)
     appendDropMenu(newNote)
     appendDeleteBtn(newNote)
-    const notepad = document.querySelector('.notepad')
-    notepad.append(newNote)
+    const noteSection = document.querySelector('.noteSection')
+    noteSection.append(newNote)
 }
 
 function appendInputText(newNote) {
     const newNoteInput = document.querySelector('#newNote').value
-    const newNoteDiv = document.createElement('div')
-    newNoteDiv.setAttribute("contentEditable", "true")
-    newNoteDiv.append(newNoteInput)
-    newNote.append(newNoteDiv)
+    const newDiv1 = document.createElement('div')
+    newDiv1.setAttribute("contentEditable", "true")
+    newDiv1.setAttribute("id", "div1")
+    newDiv1.append(newNoteInput)
+    newNote.append(newDiv1)
 }
 
 function appendDropMenu(newNote) {
+    const newDiv2 = document.createElement('div')
+    newDiv2.setAttribute("id", "div2")
     const newDrop = document.createElement('select')
+    newDiv2.setAttribute("id", "selectId")
     colorOptions(newDrop)
-    newNote.append(newDrop)
-    console.log(drop.value)
+    newDiv2.append(newDrop)
+    newNote.append(newDiv2)
     newDrop.value = drop.value
+    newNote.style.backgroundColor = drop.value
 }
 
 function appendDeleteBtn(newNote) {
     const newBtn = document.createElement('button')
+    const newDiv3 = document.createElement('div')
+    newDiv3.setAttribute("id", "div3")
     newBtn.classList.add("newNoteDelete")
     newBtn.innerHTML = "delete"
     newBtn.addEventListener('click', () => newNote.remove())
-    newNote.append(newBtn)
+    newDiv3.append(newBtn)
+    newNote.append(newDiv3)
 }
 
 //toggle button
@@ -65,9 +76,9 @@ const tglBtn = document.getElementById('tglBtn')
 tglBtn.onclick = function () {
     if (tglForm.style.display !== "block") {
         tglForm.style.display = "block"
-        tglBtn.innerHTML = "close"
     } else {
         tglForm.style.display = "none"
-        tglBtn.innerHTML = "add"
     }
 }
+
+//change-color

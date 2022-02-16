@@ -5,30 +5,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
     <title>Colored Notes</title>
 </head>
 
 <body>
-    <div class="headerSection">
-        <h1 class="header">MY NOTES</h1>
-        <div id="tglForm">
-            <form action="index.html" class="createNote">
-                <div class="newNotes">
-                    <input type="text" id="newNote" name="newNote" placeholder="Write your note">
-                    <select type="option" name="newNote" id="newSelect"></select>
-                </div>
-                <div class="submitBtn">
-                    <button id="submitBtn">create</button>
-                </div>
-            </form>
+    <div id="tglForm">
+        <div class="newNotes">
+            <input type="text" id="newNote" name="newNote" placeholder="Write your note">
         </div>
-        <div class="tglBtnSection">
-            <button id="tglBtn">add</button>
+        <div>
+            <select type="option" name="newNote" id="newSelect"></select>
+        </div>
+        <div class="submitBtn">
+            <button id="submitBtn">create</button>
         </div>
     </div>
-    <div class="notepadDiv">
-        <ul class="notepad"></ul>
+    <div class="panel2">
+        <div class="headerSection">
+            <h1 class="header">MY NOTES</h1>
+            <div>
+                <button id="tglBtn">add</button>
+            </div>
+        </div>
+        <div class="noteSection">
+        </div>
     </div>
     <script src="app.js"></script>
 </body>
