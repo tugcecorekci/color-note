@@ -55,7 +55,7 @@ html {
 }
 
 body {
-    background-color: #C7EDE4;
+    background-color: #edf5ff		;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -70,13 +70,12 @@ body {
 }
 
 .panel2 {
-    background-color: #fff;
+    background-color:#fff;
     border-radius: 10px;
     padding: 25px;
     width: 100%;
     max-width: 960px;
     min-height: 300px;
-    text-transform: uppercase;
     display: flex;
     flex-direction: column;
 }
@@ -84,18 +83,17 @@ body {
 .headerSection {
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid #820B8A;
+    border-bottom: 1px solid #002d9c;
     padding-bottom: 15px;
 }
 
 .headerSection h1{
     font-weight: bold;
     font-size: x-large;
-    color: #820B8A;
+    color: #002d9c;
 }
 
 .noteSection {
-    text-transform: capitalize;
     margin-top: 30px;
     max-width: 100%;
     display: flex;
@@ -115,7 +113,7 @@ body {
 }
 
 button {
-    background-color: #820B8A;
+    background-color: #002d9c;
     color: #fff;
     border: none;
     padding: 0.5em 1em;
