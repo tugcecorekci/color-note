@@ -19,7 +19,6 @@ const colors = [
 ]
 
 const drop = document.querySelector('select')
-drop.setAttribute("required", "true")
 drop.appendChild(new Option("select", "0"))
 
 function colorOptions(a) {
@@ -31,8 +30,31 @@ function colorOptions(a) {
     }
 }
 
-
 colorOptions(drop)
+
+drop.addEventListener('change', bgChange)
+
+function bgChange() {
+    if (drop.value == 0) {
+        tglForm.style.backgroundColor = "#d0e2f7"
+    } else {
+        tglForm.style.backgroundColor = drop.value
+    }
+}
+
+//toggle button
+const tglForm = document.getElementById('tglForm')
+const tglBtn = document.getElementById('tglBtn')
+tglBtn.onclick = function () {
+    if (tglForm.style.display !== "flex") {
+        tglForm.style.display = "flex"
+    }
+    else {
+        tglForm.style.display = "none"
+    }
+}
+
+//notes
 
 const notes = []
 const noteSection = document.querySelector('.noteSection')
@@ -49,6 +71,7 @@ function clickHandler(e) {
         tglForm.style.display = "none"
         document.querySelector('#newNote').value = ""
         drop.value = 0
+        tglForm.style.backgroundColor = "#fff"
     }
 }
 
@@ -122,19 +145,6 @@ function createBtn(i, newNote) {
     noteSection.append(newNote)
 }
 
-
-//toggle button
-const tglForm = document.getElementById('tglForm')
-const tglBtn = document.getElementById('tglBtn')
-tglBtn.onclick = function () {
-    if (tglForm.style.display !== "flex") {
-        tglForm.style.display = "flex"
-    }
-    else {
-        tglForm.style.display = "none"
-    }
-}
-
 // search function
 function searching() {
     const search = document.getElementById('search')
@@ -149,5 +159,5 @@ function searching() {
             p.style.display = "none"
 
         }
-    } console.log(search.value)
+    }
 }
