@@ -122,7 +122,7 @@ body {
 }
 
 .oneNote div:first-of-type {
-    flex-grow: 1;
+    flex-grow: 1;  
 }
 
 button {
@@ -157,12 +157,10 @@ select, input {
 
 input[type=text] {
     border: none;
-    background-color:  #11ffee00;
+    background-color: #11ffee00;
     outline: none;
-    /* webkit-appearance: none; */
 }
 
 .panel2 input[type=text] {
     min-width: 90%;
 }
-
