@@ -52,13 +52,14 @@ table {
 html {
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
+    padding-top: 200px;
 }
 
 body {
-    background-color: #edf5ff		;
+    background-color: #edf5ff;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     min-height: 100vh;
 }
@@ -127,15 +128,15 @@ body {
 button {
     background-color: #002d9c;
     color: #fff;
-    border-color:black;
-    border-width: thin;
-    padding: 0.5em 1em;
+    border: none;
+    padding: 0.6em 1em;
     margin: 0.2em;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 14px;
     border-radius: .3em;
+    cursor: pointer;
 }
 
 select, input {
@@ -151,6 +152,7 @@ select, input {
     font-weight: light;
     background-color:  #11ffee00;
     outline: none;
+    cursor: pointer;
 }
 
 input[type=text] {

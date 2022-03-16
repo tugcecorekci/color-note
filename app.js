@@ -2,11 +2,11 @@
 const colors = [
     {
         colorname: "blue",
-        colorcode: "#80DEEA"
+        colorcode: "#63B4D1"
     },
     {
         colorname: "purple",
-        colorcode: "#BA68C8"
+        colorcode: "#AFBBF2"
     },
     {
         colorname: "yellow",
