@@ -52,6 +52,7 @@ tglBtn.onclick = function () {
     else {
         tglForm.style.display = "none"
     }
+    window.scrollTo(0, 0)
 }
 
 //notes
